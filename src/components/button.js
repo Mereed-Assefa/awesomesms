@@ -1,6 +1,8 @@
-export default function MyButton() {
-  <>
-    <h2>f</h2>
-    <button>ff</button>
-  </>;
+export default function MyButton(props) {
+  return (
+    <div>
+      <h2>{props.header}</h2>
+      <button>{props.name}</button>
+    </div>
+  );
 }
