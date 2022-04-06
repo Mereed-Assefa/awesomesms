@@ -4,7 +4,7 @@ export default function Counter({ increment }) {
   };
 
   const handleReset = () => {
-    increment(100);
+    increment(0);
   };
 
   return (

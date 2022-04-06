@@ -4,7 +4,7 @@ import Display from "./components/Display";
 import { useState } from "react";
 
 export default function App() {
-  const [count, setCount] = useState(10);
+  const [count, setCount] = useState(0);
 
   return (
     <div className="App">
