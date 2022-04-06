@@ -1,31 +1,15 @@
 import "./styles.css";
-import MyButton from "./components/button.js";
+import Counter from "./components/Counter";
+import Display from "./components/Display";
+import { useState } from "react";
 
-const buttonList = [
-  {
-    id: "b1",
-    header: "Heading one",
-    name: "Click me"
-  },
-  {
-    id: "b2",
-    header: "Heading two",
-    name: "Click here"
-  }
-];
 export default function App() {
+  const [count, setCount] = useState(10);
+
   return (
     <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
-      <MyButton
-        header={buttonList[0].header}
-        name={buttonList[0].name}
-      ></MyButton>
-      <MyButton
-        header={buttonList[1].header}
-        name={buttonList[1].name}
-      ></MyButton>
+      <Display mycount={count} />
+      <Counter increment={setCount} />
     </div>
   );
 }
